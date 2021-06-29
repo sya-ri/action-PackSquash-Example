@@ -1,0 +1,16 @@
+name: Optimize ResoucePack
+on: [push]
+jobs:
+  packsquash:
+    name: Optimize
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@master
+        with:
+          fetch-depth: 1
+      - name: Run PackSquash
+        uses: sya-ri/action-PackSquash@develop
+        with:
+          path: texture
+
