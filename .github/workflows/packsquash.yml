@@ -13,4 +13,9 @@ jobs:
         uses: sya-ri/action-PackSquash@develop
         with:
           path: texture
-
+          output: optimize-texture.zip
+      - name: Output Optimized
+        uses: actions/upload-artifact@v2
+        with:
+          name: optimize-texture
+          path: optimize-texture.zip
