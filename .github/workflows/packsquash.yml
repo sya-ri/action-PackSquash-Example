@@ -5,17 +5,16 @@ jobs:
     name: Optimize
     runs-on: ubuntu-latest
     steps:
-      - name: Clone repo
+      - name: Clone Repository
         uses: actions/checkout@master
         with:
           fetch-depth: 1
       - name: Run PackSquash
-        uses: sya-ri/action-PackSquash@develop
+        uses: sya-ri/action-PackSquash@v1.0.0
         with:
           path: texture
-          output: optimize-texture.zip
       - name: Output Optimized
         uses: actions/upload-artifact@v2
         with:
           name: optimize-texture
-          path: optimize-texture.zip
+          path: optimize-texture
