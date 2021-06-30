@@ -18,11 +18,12 @@ jobs:
         uses: sya-ri/action-PackSquash@v1.0.0
         with:
           path: texture
+          output: optimize-texture.zip
       - name: Output Optimized
         uses: actions/upload-artifact@v2
         with:
-          name: optimize-texture
-          path: optimize-texture
+          name: optimize-texture.zip
+          path: optimize-texture.zip
 ```
 
 ## Create Release On Push Tag [.github/workflows/packsquash-release.yml](.github/workflows/packsquash-release.yml)
